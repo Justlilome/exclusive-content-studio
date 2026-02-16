@@ -1,23 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Overview – Exclusive Content Studio</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="overview.html" class="nav-link>Overview</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview – Exclusive Content Studio</title>
+    <!-- Use the same stylesheet as index.html -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">BBM &amp; Exclusive Content Studio</div>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="overview.html" class="nav-link">Overview</a>
+        <!-- Optional: add these if you want consistent nav items -->
+        <!-- <a href="#access">Membership</a> -->
+        <!-- <a href="#contact">Contact</a> -->
+      </nav>
+    </header>
 
-  <main>
-    <h1>Overview</h1>
-    <p>Put your detailed overview content here…</p>
-  </main>
-</body>
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h1>
+              <span class="accent">About This Experience</span>
+            </h1>
+            <p class="hero-text">
+              This private studio is designed for members who want a more
+              intentional, curated experience with adult-focused content.
+              Instead of scrolling through public platforms, you get direct
+              access to the creator, themed drops, and a secure way to engage.
+            </p>
+
+            <div class="hero-badges">
+              <span class="badge">Creator-owned content</span>
+              <span class="badge">Discreet member access</span>
+              <span class="badge">Curated experiences</span>
+            </div>
+          </div>
+
+          <aside class="panel">
+            <div class="panel-title">What to expect inside</div>
+            <div class="panel-subtitle">
+              A focused, members-first space with clear expectations and
+              boundaries.
+            </div>
+            <ul class="list">
+              <li>
+                <span class="dot"></span>
+                Regular content drops organized by theme or storyline
+              </li>
+              <li>
+                <span class="dot"></span>
+                Private links shared only with active members
+              </li>
+              <li>
+                <span class="dot"></span>
+                Space for feedback and future content suggestions
+              </li>
+            </ul>
+            <span class="status">
+              <span class="dot" style="background: #22c55e"></span>
+              Overview updated as the studio evolves
+            </span>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <a href="index.html">Back to main page</a>
+      </div>
+      <p>
+        &copy; <span id="year"></span> Exclusive Content Studio. All rights
+        reserved.
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
-
