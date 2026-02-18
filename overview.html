@@ -116,3 +116,211 @@
     </script>
   </body>
 </html>
+To use this:
+
+Replace the entire contents of your current overview.html with this.
+Make sure styles.css is the same file your index.html is using.
+If you want the overview page to use the exact same header/footer style as that first inline‑CSS index.html you pasted (instead of the newer styles.css setup), paste your current styles.css here and I can align everything perfectly to that look too.
+
+
+Insert
+
+Overview – Exclusive Content Studio
+https://justlilome.github.io/exclusive-content-studio/overview.html
+omg u did do anything I ask it look thee same
+You’re right that the content changed but the look didn’t—because the HTML I gave you is already using the same layout and classes as your index, and both pages share styles.css. So the browser renders them with the same overall style.
+
+If what you meant is:
+
+“Make the overview look more like the first index you pasted with the dark gradient background, badges, panel, etc.” → it already does.
+“I want the overview to look visually different from the home page (different layout, spacing, etc.) but still in the same style system” → then we should change the structure, not just fix the HTML.
+Let’s do exactly what you want:
+
+1. Clarify what you want changed
+Reply and tell me which of these you’re after:
+
+A. Same style, but more compact (less tall hero, tighter text)
+B. Same style, but different layout (e.g., cards/grid instead of side panel)
+C. Same layout, but more visual emphasis (bigger heading, different badges, extra section under the hero)
+If you’re not sure, you can also say: “Make it feel like a real About page vs a hero page.”
+
+2. Quick visual tweaks right now
+Here is a version that:
+
+Slightly tightens the text width
+Makes the heading a bit larger
+Adds a subtle divider below the hero so it doesn’t feel identical to Home
+You can paste this over your current overview.html:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview – Exclusive Content Studio</title>
+
+    <!-- Fonts (same style as index.html) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Barcode+39&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Quattrocento:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main stylesheet (shared with index.html) -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* Page-specific tweaks for OVERVIEW only */
+      .hero.overview-hero {
+        padding-top: 2.5rem;
+        padding-bottom: 3rem;
+      }
+
+      .hero.overview-hero .hero-text {
+        max-width: 30rem;
+      }
+
+      .hero.overview-hero h1 {
+        font-size: clamp(2.4rem, 4.4vw, 3.2rem);
+      }
+
+      .overview-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.4), transparent);
+        margin: 0 1.5rem 2.5rem;
+      }
+
+      .overview-extra {
+        max-width: 960px;
+        margin: 0 auto 3rem;
+        padding: 0 1.5rem;
+        color: #cbd5f5;
+        font-size: 0.95rem;
+      }
+
+      .overview-extra h2 {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .overview-extra p {
+        margin-bottom: 0.75rem;
+      }
+    </style>
+  </head>
+
+  <body class="site-body">
+    <header class="site-header">
+      <div class="logo">BBM &amp; Exclusive Content Studio</div>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="overview.html" class="nav-link nav-link-active">Overview</a>
+        <a href="#access" class="nav-link">Membership</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero overview-hero">
+        <div class="hero-inner">
+          <div class="hero-left">
+            <p class="eyebrow">Overview</p>
+            <h1>
+              <span class="accent">About This Experience</span>
+            </h1>
+            <p class="hero-text">
+              Bringing you a private studio – an adult playground with your very
+              own set and performers waiting for you to yell
+              <strong>ACTION!!</strong> The choices are endless and depend on
+              what gets your heart racing.
+                
+  
+
+              But wait, there&apos;s more! Whether it&apos;s live webcam shows,
+              personalized videos, or fetish-themed scenes, that&apos;s up to you.
+                
+  
+
+              The best thing I have yet to introduce, and available for booking
+              starting this April, is
+              <strong>LIVE STUDIO PERFORMANCES!!</strong> You&apos;ll get
+              front-row seats.
+                
+  
+
+              Interested now? Just click on the links below for more details and
+              how to book and/or order. See you soon!
+            </p>
+
+            <div class="hero-badges">
+              <span class="badge">Creator-owned content</span>
+              <span class="badge">Discreet member access</span>
+              <span class="badge">Up close and personal experiences</span>
+            </div>
+          </div>
+
+          <aside class="panel">
+            <div class="panel-title">What to Expect Inside</div>
+            <div class="panel-subtitle">
+              A focused, members-first space with clear expectations and
+              boundaries.
+            </div>
+            <ul class="list">
+              <li>
+                <span class="dot"></span>
+                Regular content organized by theme or storyline
+              </li>
+              <li>
+                <span class="dot"></span>
+                Exclusive offers available for active members
+              </li>
+              <li>
+                <span class="dot"></span>
+                Easy to order, secure payment options, and service satisfaction
+                guaranteed
+              </li>
+            </ul>
+            <span class="status">
+              <span class="dot" style="background: #22c55e"></span>
+              Responds to calls and emails in as little as an hour
+            </span>
+          </aside>
+        </div>
+      </section>
+
+      <div class="overview-divider"></div>
+
+      <section class="overview-extra">
+        <h2>Why a Private Studio?</h2>
+        <p>
+          This space is designed so you can explore what you love without the
+          noise of big platforms. Fewer distractions, more connection, and a
+          studio built around your fantasies.
+        </p>
+        <p>
+          As a member, you&apos;re supporting an independent creator directly while
+          getting a more tailored experience.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="index.html">Back to main page</a>
+      </div>
+      <p>
+        &copy; <span id="year"></span> Exclusive Content Studio. All rights
+        reserved.
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
