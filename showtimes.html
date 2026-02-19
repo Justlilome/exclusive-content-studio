@@ -1,1 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Showtimes | Exclusive Content Studio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #050816;
+        color: #f9fafb;
+        line-height: 1.5;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      header {
+        padding: 1.25rem 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+        background: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(12px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .logo {
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+      }
+
+      nav a {
+        margin-left: 1.25rem;
+        font-size: 0.9rem;
+        color: #e5e7eb;
+        text-decoration: none;
+        position: relative;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.25rem;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #22d3ee, #a855f7);
+        transition: width 0.2s ease;
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      main {
+        padding: 3rem 1.5rem 4rem;
+      }
+
+      .showtimes-wrapper {
+        max-width: 960px;
+        margin: 0 auto;
+        background: radial-gradient(
+            circle at top,
+            rgba(56, 189, 248, 0.25),
+            transparent 60%
+          ),
+          rgba(15, 23, 42, 0.95);
+        border-radius: 1.25rem;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.9);
+        padding: 2rem 1.75rem 2.25rem;
+      }
+
+      .eyebrow {
+        font-size: 0.8rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #64748b;
+        margin-bottom: 0.75rem;
+      }
+
+      h1 {
+        font-size: clamp(2.1rem, 4vw, 3rem);
+        margin-bottom: 1rem;
+      }
+
+      .accent {
+        background: linear-gradient(90deg, #22d3ee, #a855f7);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .intro-text {
+        color: #cbd5f5;
+        font-size: 0.98rem;
+        max-width: 34rem;
+        margin-bottom: 1.75rem;
+      }
+
+      .show-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .show-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.9rem 1rem;
+        border-radius: 0.9rem;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        background: rgba(15, 23, 42, 0.9);
+      }
+
+      .show-main {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .show-title {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .show-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        font-size: 0.88rem;
+        color: #d1d5db;
+      }
+
+      .pill {
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        font-size: 0.78rem;
+        color: #e5e7eb;
+        background: rgba(15, 23, 42, 0.8);
+      }
+
+      footer {
+        padding: 1.5rem 1.5rem 2.5rem;
+        text-align: center;
+        font-size: 0.75rem;
+        color: #6b7280;
+        border-top: 1px solid rgba(31, 41, 55, 0.9);
+        background: #020617;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer-links a {
+        color: #9ca3af;
+        text-decoration: none;
+        font-size: 0.75rem;
+      }
+
+      @media (max-width: 600px) {
+        .show-item {
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">BBM & Exclusive Content Studio</div>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="overview.html" class="nav-link">Overview</a>
+        <a href="membership.html" class="nav-link">Membership</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="showtimes">
+        <div class="showtimes-wrapper">
+          <p class="eyebrow">Live & On-Stage</p>
+          <h1>
+            <span class="accent">Show Schedule</span>
+          </h1>
+          <p class="intro-text">
+            Current and upcoming productions with confirmed dates and start
+            times. Check back for new drops and special events.
+          </p>
+
+          <ul class="show-list">
+            <!-- Show 1 -->
+            <li class="show-item">
+              <div class="show-main">
+                <span class="show-title">Show Title 1</span>
+                <div class="show-meta">
+                  <span>Date: March 10, 2026</span>
+                  <span>Time: 7:00 PM</span>
+                </div>
+              </div>
+              <span class="pill">Now booking</span>
+            </li>
+
+            <!-- Show 2 -->
+            <li class="show-item">
+              <div class="show-main">
+                <span class="show-title">Show Title 2</span>
+                <div class="show-meta">
+                  <span>Date: March 11, 2026</span>
+                  <span>Time: 9:30 PM</span>
+                </div>
+              </div>
+              <span class="pill">Limited seats</span>
+            </li>
+
+            <!-- Add more shows as needed -->
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links" id="about">
+        <a href="membership.html#access">Membership info</a>
+        <a href="contact.html#contact">Contact</a>
+      </div>
+      <p>
+        &copy; <span id="year"></span> Exclusive Content Studio. All rights
+        reserved.
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
 
