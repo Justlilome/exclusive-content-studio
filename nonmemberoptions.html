@@ -1,1 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exclusive Content Studio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #050509;
+      color: #f7f7ff;
+      line-height: 1.6;
+      padding: 32px 16px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    header {
+      margin-bottom: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #b6b6ff;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
+
+    .subnav {
+      color: #9b9bb5;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      color: #d1d1ff;
+      max-width: 520px;
+      font-size: 15px;
+      margin-top: 8px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #ccccf5;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      font-size: 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+      color: #e0e0ff;
+    }
+
+    .card {
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: radial-gradient(circle at top left, #16162b, #070713 55%, #050509);
+      padding: 18px 18px 16px;
+    }
+
+    .card-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #8f8ff3;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .card-meta {
+      font-size: 12px;
+      color: #9b9bb5;
+      margin-bottom: 10px;
+    }
+
+    .card-list {
+      list-style: none;
+      font-size: 13px;
+      color: #d9d9ff;
+      padding-left: 0;
+    }
+
+    .card-list li + li {
+      margin-top: 4px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #8f8ff3;
+      margin: 0 8px;
+      vertical-align: middle;
+    }
+
+    .buttons {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      font-size: 13px;
+      padding: 8px 16px;
+      border: 1px solid transparent;
+      background: #f5f5ff;
+      color: #050509;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #e0e0ff;
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .btn span.icon {
+      font-size: 14px;
+    }
+
+    .mini-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #8f8ff3;
+      margin-bottom: 6px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 16px;
+      font-size: 12px;
+      color: #8080a6;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer nav a {
+      color: #b6b6ff;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    footer nav a + a {
+      margin-left: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="badge">BBM &amp; Exclusive Content Studio</div>
+      <div class="subnav">Overview • Membership • Contact</div>
+      <h1>Private access • Direct from creator</h1>
+      <p class="tagline">
+        Adult Theater Productions — secure, discreet membership to creator-owned content in
+        adult‑focused lifestyles. No noise, just direct access.
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Private membership access</h2>
+        <p>
+          Join a low‑noise, invite‑only space where you support the creator directly and
+          access content on your own terms.
+        </p>
+        <div class="pill-row">
+          <div class="pill">Member‑only access</div>
+          <div class="pill">Direct support to creator</div>
+          <div class="pill">Secure &amp; private</div>
+        </div>
+
+        <div class="buttons">
+          <a href="#request" class="btn">
+            <span>Request Access</span>
+            <span class="icon">→</span>
+          </a>
+          <a href="#learn" class="btn btn-secondary">Learn more • How it works</a>
+        </div>
+      </section>
+
+      <section>
+        <div class="card" aria-label="Member dashboard preview">
+          <div class="card-label">Member dashboard preview</div>
+          <div class="card-title">A simple hub for your private content library.</div>
+          <div class="card-meta">
+            Organized drops <span class="dot"></span> Private links <span class="dot"></span> Transparent support
+          </div>
+          <ul class="card-list">
+            <li>Organized by collections and drops</li>
+            <li>Private links shared only with active members</li>
+            <li>Transparent, direct creator support</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <section id="learn" style="margin-bottom: 32px;">
+      <div class="mini-label">New member spots</div>
+      <p style="font-size: 14px; color: #ccccf5; max-width: 520px;">
+        New member spots are opened in limited waves. If the studio is currently full, you can
+        still request an invite and you’ll be notified when space opens.
+      </p>
+    </section>
+
+    <section id="request" style="margin-bottom: 40px;">
+      <h2>Membership info &amp; contact</h2>
+      <p style="font-size: 14px; color: #ccccf5; max-width: 520px; margin-top: 8px;">
+        To request access or ask a question, send a short note with how you’d like to use the
+        studio. You’ll receive a private reply with current availability, pricing, and onboarding
+        details.
+      </p>
+    </section>
+
+    <footer>
+      <div>© 2026 Exclusive Content Studio. All rights reserved.</div>
+      <nav>
+        <a href="#membership">Membership info</a>
+        <a href="#request">Contact</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+</html>
 
