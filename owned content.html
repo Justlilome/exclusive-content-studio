@@ -20,6 +20,17 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap"
       rel="stylesheet"
+       .alice-regular {
+         font-family: "Alice", serif;
+         font-weight: 400;
+          font-style: normal;
+        }
+      .cookie-regular {
+  font-family: "Cookie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
      />
     
 
@@ -31,21 +42,12 @@
        }
 
     body {
- .alice-regular {
-          font-family: "Alice", serif;
-          font-weight: 400;
-          font-style: normal;
       background: #050816;
-        color: #f9fafb;
-        line-height: 1.5;
-       
-}
+      color: #f9fafb;
+      line-height: 1.5;
+    }
 
     header {
- .cookie-regular {
-         font-family: "Cookie", cursive;
-        font-weight: 400;
-         font-style: normal;
       padding: 1.25rem 1.75rem;
         display: flex;
           align-items: center;
@@ -56,36 +58,41 @@
         position: sticky;
        top: 0;
       z-index: 10;
-     
-}
+     }
 
-      }
+      
    .logo {
-       font-weight: 700;
+     .alice-regular{
+     font-family: "Alice", serif;
+       font-weight: 400;
+       font-style: normal;
        letter-spacing: 0.08em;
         text-transform: uppercase;
         font-size: 0.9rem;
         }
-nav a {
-  margin-left: 1.25rem;
-    font-size: 0.9rem;
-    color: #e5e7eb;
-     text-decoration: none;
+
+    nav a {
+      margin-left: 1.25rem;
+       font-size: 0.9rem;
+        color: #e5e7eb;
+      text-decoration: none;
      position: relative;
     }
- nav a::after {
-     content: "";
-     position: absolute;
-      left: 0;
-     bottom: -0.25rem;
-     width: 0;
-      height: 2px;
-     background: linear-gradient(90deg, #22d3ee, #a855f7);
-     transition: width 0.2s ease;
+
+     nav a::after {
+       content: "";
+        position: absolute;
+          left: 0;
+           bottom: -0.25rem;
+          width: 0;
+       height: 2px;
+      background: linear-gradient(90deg, #22d3ee, #a855f7);
+   transition: width 0.2s ease;
     }
- nav a:hover::after {
-   width: 100%;
-  }
+
+     nav a:hover::after {
+      width: 100%;
+     }
 
     .hero {
         min-height: calc(100vh - 64px);
@@ -122,6 +129,10 @@ nav a {
     }
     
     .eyebrow {
+      .alice-regular{
+        font-family: "Alice", serif;
+        font-weight: 400;
+        font-style: normal;
       font-size: 0.8rem;
         letter-spacing: 0.2em;
         text-transform: uppercase;
@@ -130,12 +141,13 @@ nav a {
       }
 
    h1 {
+     .cookie-regular{
+       font-family:"Cookie",cursive;
+       font-weight:400;
+       font-style:normal;
      font-size: clamp(2.1rem, 4vw, 3rem);
      margin-bottom: 1rem;
-     .cookie-regular {
-  font-family: "Cookie", cursive;
-  font-weight: 400;
-  font-style: normal;
+     
 }
 
    }
@@ -147,12 +159,12 @@ nav a {
   }
 
  .hero-text {
+   font-family:"Alice,serif;
+   font-weight:400;
+   font-style:normal;
       color: #cbd5f5;
       font-size: 0.98rem;
-    .alice-regular {
-  font-family: "Alice", serif;
-  font-weight: 400;
-  font-style: normal;
+    
 }
       max-width: 34rem;
       margin-bottom: 1.75rem;
@@ -170,10 +182,7 @@ nav a {
         border-radius: 999px;
         border: 1px solid rgba(148, 163, 184, 0.4);
         font-size: 0.75rem;
-     .alice-regular {
-  font-family: "Alice", serif;
-  font-weight: 400;
-  font-style: normal;
+     
 }
         color: #e5e7eb;
         background: rgba(15, 23, 42, 0.7);
@@ -224,23 +233,20 @@ nav a {
       }
 
       .panel-title {
+        font-family:"Cookie", cursive;
+        font-weight:400;
+        font-style:normal;
         font-size: 0.95rem;
         font-weight: 600;
         margin-bottom: 0.75rem;
-        .cookie-regular {
-  font-family: "Cookie", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
       }
 
       .panel-subtitle {
+        font-family:"Alice",serif;
+        font-weight: 400;
+        font-style:normal;
         font-size: 0.8rem;
-         .alice-regular {
-  font-family: "Alice", serif;
-  font-weight: 400;
-  font-style: normal;
+         
 }
         color: #9ca3af;
         margin-bottom: 1rem;
@@ -254,11 +260,12 @@ nav a {
       }
 
       .list li {
+        font-family: "Alice", serif;
+        font-weight:400;
+        font-style: normal;
         font-size: 0.8rem;
-         .alice-regular {
-  font-family: "Alice", serif;
-  font-weight: 400;
-  font-style: normal;
+        
+  
 }
         color: #d1d5db;
         display: flex;
