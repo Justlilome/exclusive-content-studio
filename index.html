@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -33,100 +33,258 @@
       top: 0;
       z-index: 10;
     }
-<nav>
-  <ul>
-    <li><a href="index.html">Index</a></li>
-    <li><a href="overview.html">Overview</a></li>
-    <li><a href="owned-content.html">Owned Content</a></li>
-    <li><a href="non-member.html">Non-member</a></li>
-  </ul>
-</nav>
+
     nav a {
       margin: 0 0.75rem;
       font-size: 0.9rem;
       color: #e5e7eb;
+      text-decoration: none;
+    }
 
-  <body>
-    <header>
-      <div class="logo"> BBM & Exclusive Content Studio</div>
-      <nav>
-        <a href="overview.html" class="nav-link">Overview</a>
-        <a href="membership.html" class="nav-link">Membership</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    nav a:hover {
+      color: #22d3ee;
+    }
 
-    <main>
-      <section class="hero">
-        <div class="hero-inner">
-          <div>
-            <p class="eyebrow">Private access • Direct from creator</p>
-            <h1>
-              
-              <span class="accent">Adult Theater Productions</span>
-              
-            </h1>
-              <p class="hero-text">
-                 Site offers a secure, discreet membership to creator-owned content in adult-focused lifestyles. No noise, just direct access.
-             </p>
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
 
-            <div class="hero-badges">
-                <span class="badge">Non-Member access</span>
-                    <span class="badge">Direct support to creator</span>
-                </div>
+    .hero {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
 
-             <div class="hero-buttons">
-                <button class="btn-primary">Request Access</button>
-                 <button class="btn-secondary">
-                     Learn more
-                   <span>&bull; How it works</span>
-                 </button>
-                </div>
-              </div>
+    .hero-inner {
+      display: contents;
+    }
 
-          <aside class="panel">
-            <div class="panel-title">Member dashbo</div>
-            <div class="panel-subtitle">Creater Content</div>
-              A simple hub for your private content library.
-            </div>
-            <ul class="list">
-              <li>
-                <span class="dot"></span>
-                Organized by collections and drops
-              </li>
-              <li>
-                <span class="dot"></span>
-                Private links shared only with active members
-              </li>
-              <li>
-                <span class="dot"></span>
-                Transparent, direct creator support
-              </li>
-            </ul>
-            <span class="status">
-              <span class="dot" style="background: #22c55e"></span>
-              New member spots opening soon
-            </span>
-          </aside>
-        </div>
-      </section>
-    </main>
+    .eyebrow {
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
 
-    <footer>
-      <div class="footer-links" id="about">
-        <a href="#access">Membership info</a>
-        <a href="#contact">Contact</a>
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    .accent {
+      display: inline-block;
+      font-family: "Cookie", cursive;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      background: linear-gradient(90deg, #22d3ee, #a855f7);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-text {
+      color: #d1d5db;
+      margin-bottom: 1.25rem;
+      max-width: 650px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(34, 211, 238, 0.12);
+      border: 1px solid rgba(34, 211, 238, 0.35);
+      color: #e5e7eb;
+      font-size: 0.85rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      border: none;
+      border-radius: 999px;
+      padding: 0.85rem 1.2rem;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #22d3ee;
+      color: #020617;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #f9fafb;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+    }
+
+    .panel {
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      background:
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.25), transparent 60%),
+        rgba(15, 23, 42, 0.98);
+      border: 2px solid rgba(34, 211, 238, 0.65);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.9);
+    }
+
+    .panel-title {
+      font-family: "Cookie", cursive;
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .panel-subtitle {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      margin-bottom: 1rem;
+    }
+
+    .list {
+      list-style: none;
+      margin-left: 0;
+      display: grid;
+      gap: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .list li {
+      position: relative;
+      padding-left: 1.25rem;
+      font-size: 0.9rem;
+      color: #d1d5db;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22d3ee;
+      margin-right: 0.5rem;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #d1d5db;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #6b7280;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      background: #020617;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: #22d3ee;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+
+      nav a {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Index</a>
+      <a href="overview.html">Overview</a>
+      <a href="owned-content.html">Owned Content</a>
+      <a href="non-member.html">Non-member</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">Private access • Direct from creator</p>
+          <h1><span class="accent">Adult Theater Productions</span></h1>
+          <p class="hero-text">
+            Site offers a secure, discreet membership to creator-owned content in adult-focused lifestyles. No noise, just direct access.
+          </p>
+      <div class="hero-badges">
+        <span class="badge">Non-Member access</span>
+        <span class="badge">Direct support to creator</span>
       </div>
-      <p>
-        &copy; <span id="year"></span> Exclusive Content Studio. All rights
-        reserved.
-      </p>
-    </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+      <div class="hero-buttons">
+        <button class="btn-primary">Request Access</button>
+        <button class="btn-secondary">Learn more <span>&bull; How it works</span></button>
+      </div>
+    </div>
+
+    <aside class="panel">
+      <div class="panel-title">Member dashboard</div>
+      <div class="panel-subtitle">Creator Content</div>
+      <p>A simple hub for your private content library.</p>
+
+      <ul class="list">
+        <li><span class="dot"></span> Organized by collections and drops</li>
+        <li><span class="dot"></span> Private links shared only with active members</li>
+        <li><span class="dot"></span> Transparent, direct creator support</li>
+      </ul>
+
+      <span class="status"><span class="dot" style="background: #22c55e"></span> New member spots opening soon</span>
+    </aside>
+  </div>
+</section>
+
+  </main>
+  <footer>
+    <div class="footer-links" id="about">
+      <a href="#access">Membership info</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>&copy; <span id="year"></span> Exclusive Content Studio. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
-
-
