@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Exclusive Content Studio</title>
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Cookie&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Cookie&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
@@ -51,27 +51,9 @@
       padding: 4rem 1.5rem;
     }
 
-    .hero {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 2rem;
-      align-items: start;
-    }
-
-    .hero-inner {
-      display: contents;
-    }
-
-    .eyebrow {
-      color: #cbd5e1;
-      font-size: 0.85rem;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    h1 {
-      margin-bottom: 1rem;
+    .intro {
+      text-align: center;
+      margin-bottom: 2.5rem;
     }
 
     .accent {
@@ -80,61 +62,58 @@
       font-size: clamp(2.5rem, 6vw, 4.5rem);
       background: linear-gradient(90deg, #22d3ee, #a855f7);
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
+      margin-bottom: 1rem;
     }
 
-    .hero-text {
+    .tagline {
       color: #d1d5db;
-      margin-bottom: 1.25rem;
-      max-width: 650px;
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.05rem;
     }
 
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 1.5rem;
+    .content-box {
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.55);
     }
 
-    .badge {
-      display: inline-block;
-      padding: 0.45rem 0.8rem;
-      border-radius: 999px;
-      background: rgba(34, 211, 238, 0.12);
-      border: 1px solid rgba(34, 211, 238, 0.35);
-      color: #e5e7eb;
+    .section-label {
+      color: #22d3ee;
       font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
+    h2 {
+      margin-bottom: 1rem;
+      color: #ffffff;
     }
 
-    .btn-primary,
-    .btn-secondary {
-      border: none;
-      border-radius: 999px;
-      padding: 0.85rem 1.2rem;
-      font-size: 0.95rem;
-      cursor: pointer;
+    p {
+      color: #d1d5db;
+      margin-bottom: 1rem;
     }
 
-    .btn-primary {
-      background: #22d3ee;
-      color: #020617;
+    ul {
+      margin: 1rem 0 1rem 1.25rem;
     }
 
-    .btn-secondary {
-      background: transparent;
-      color: #f9fafb;
-      border: 1px solid rgba(148, 163, 184, 0.45);
+    li {
+      color: #d1d5db;
+      margin-bottom: 0.75rem;
     }
 
     .panel {
       border-radius: 1.25rem;
       padding: 1.5rem;
+      margin-bottom: 2rem;
       background:
         radial-gradient(circle at top, rgba(56, 189, 248, 0.25), transparent 60%),
         rgba(15, 23, 42, 0.98);
@@ -155,6 +134,11 @@
       margin-bottom: 1rem;
     }
 
+    .highlight {
+      color: #22d3ee;
+      font-weight: bold;
+    }
+
     .list {
       list-style: none;
       margin-left: 0;
@@ -170,21 +154,29 @@
       color: #d1d5db;
     }
 
-    .dot {
-      display: inline-block;
+    .list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.65rem;
       width: 8px;
       height: 8px;
       border-radius: 999px;
       background: #22d3ee;
-      margin-right: 0.5rem;
     }
 
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: #d1d5db;
-      font-size: 0.9rem;
+    .back-link {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back-link a {
+      color: #22d3ee;
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -196,50 +188,33 @@
       background: #020617;
     }
 
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .footer-links a {
-      color: #22d3ee;
-      text-decoration: none;
-    }
-
     @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
+      .container {
+        padding: 3rem 1rem;
       }
 
-      header {
-        justify-content: center;
-      }
-
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem;
-      }
-
-      nav a {
-        margin: 0;
+      .accent {
+        font-size: clamp(2.25rem, 12vw, 3.5rem);
       }
     }
   </style>
 </head>
-
-  
 <body>
   <header>
-   <main class="container">
-    <div class="intro">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="overview.html">Overview</a>
+      <a href="owned-content.html">Membership</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="intro">
       <span class="accent">Creator Content Membership</span>
-      <p class="tagline">Your fantasies, crafted by independent creators for a fully private, personalized experience.</p>
-    </div>
-<div class="content-box">
+      <p class="tagline">
+        Your fantasies, crafted by independent creators for a fully private, personalized experience.
+      </p>
+    </section>
+<section class="content-box">
   <div class="section-label">Inside the Studio</div>
   <h2>Membership Items</h2>
 
@@ -260,14 +235,14 @@
     Because this is creator-owned, you get a more authentic, direct connection to the person you’re watching — no middlemen,
     no generic feel, just you and the creator.
   </p>
-</div>
+</section>
 
 <aside class="panel">
   <div class="panel-title">Membership Details</div>
 
   <p class="panel-subtitle">
     As a <span class="highlight">member</span>, you step into a private, members-first space where content is organized for you,
-    not for the algorithm. Your access is discreet, secure, and always what you prefer, when you want it and how you want it!
+    not for the algorithm. Your access is discreet, secure, and always what you prefer, when you want it and how you want it.
     Please remember, if you want something specific, contact me with details at least 24 hours before the date you are requesting.
     First come, first served for all available dates and times.
   </p>
@@ -286,7 +261,7 @@
   </p>
 </aside>
 
-<div class="content-box">
+<section class="content-box">
   <div class="section-label">Deeper Connection</div>
   <h2>What Makes My Entertainment Different</h2>
 
@@ -306,7 +281,12 @@
     Every up-close experience is built around <strong>consent, comfort, and clear boundaries</strong> for everyone involved.
     Once membership is applied, you will be able to access available options, including the event calendar.
   </p>
-</div>
+</section>
+
+<p class="back-link">
+  <a href="overview.html">&larr; Back to Overview</a>
+</p>
+
   </main>
   <footer>
     &copy; 2026 Exclusive Content Studio. All rights reserved.
